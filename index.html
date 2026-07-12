@@ -1,0 +1,1510 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>无锡太湖学院 · 2026新生全攻略</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0d6b35;
+    --primary-light: #e8f5e9;
+    --primary-dark: #064220;
+    --accent: #f5a623;
+    --accent-light: #fff8e1;
+    --telecom: #0055d4;
+    --telecom-light: #e8f0ff;
+    --telecom-gradient: linear-gradient(135deg, #003da5 0%, #0055d4 50%, #2979ff 100%);
+    --red: #e53935;
+    --red-light: #ffebee;
+    --bg: #f0f2f5;
+    --card: #ffffff;
+    --text: #2c3e50;
+    --text-light: #5a6c7d;
+    --text-muted: #8899aa;
+    --border: #e8ecf1;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow: 0 4px 24px rgba(0,0,0,0.07);
+    --shadow-lg: 0 12px 48px rgba(0,0,0,0.1);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+  body {
+    font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #04381a 0%, #0d6b35 30%, #16914a 60%, #0d6b35 100%);
+    color: white;
+    padding: 80px 24px 70px;
+    text-align: center;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.07;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 50%, #fff 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 80% 30%, #fff 0%, transparent 50%),
+      radial-gradient(circle at 50% 80%, rgba(255,255,255,0.4) 0%, transparent 40%);
+  }
+  .hero-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .hero-particles span {
+    position: absolute;
+    display: block;
+    width: 6px; height: 6px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    animation: rise 15s linear infinite;
+  }
+  .hero-particles span:nth-child(1) { left: 5%; animation-delay: 0s; animation-duration: 18s; }
+  .hero-particles span:nth-child(2) { left: 15%; animation-delay: 2s; animation-duration: 14s; }
+  .hero-particles span:nth-child(3) { left: 25%; animation-delay: 5s; animation-duration: 20s; }
+  .hero-particles span:nth-child(4) { left: 35%; animation-delay: 1s; animation-duration: 16s; }
+  .hero-particles span:nth-child(5) { left: 45%; animation-delay: 8s; animation-duration: 13s; }
+  .hero-particles span:nth-child(6) { left: 55%; animation-delay: 3s; animation-duration: 19s; }
+  .hero-particles span:nth-child(7) { left: 65%; animation-delay: 6s; animation-duration: 15s; }
+  .hero-particles span:nth-child(8) { left: 75%; animation-delay: 4s; animation-duration: 17s; }
+  .hero-particles span:nth-child(9) { left: 85%; animation-delay: 7s; animation-duration: 12s; }
+  .hero-particles span:nth-child(10) { left: 95%; animation-delay: 9s; animation-duration: 21s; }
+  @keyframes rise {
+    0% { transform: translateY(400px) scale(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
+  }
+  .hero * { position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50px;
+    padding: 8px 24px;
+    font-size: 14px; font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+    animation: fadeInDown 0.8s ease;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    animation: fadeInUp 0.8s ease;
+  }
+  .hero h1 .accent {
+    background: linear-gradient(135deg, #ffd54f 0%, #ffb300 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-subtitle {
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 300;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    animation: fadeInUp 0.8s 0.15s ease both;
+  }
+  .hero-meta {
+    margin-top: 20px;
+    font-size: 13px;
+    opacity: 0.6;
+    animation: fadeInUp 0.8s 0.3s ease both;
+  }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ===== NAVIGATION ===== */
+  .nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  }
+  .nav-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 4px;
+    padding: 0 16px;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-inner a {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 15px 14px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    transition: var(--transition);
+    border-bottom: 2.5px solid transparent;
+    flex-shrink: 0;
+  }
+  .nav-inner a:hover,
+  .nav-inner a.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+    background: var(--primary-light);
+  }
+  .nav-inner a.nav-telecom { color: var(--telecom); font-weight: 600; }
+  .nav-inner a.nav-telecom:hover,
+  .nav-inner a.nav-telecom.active {
+    color: #003da5;
+    border-bottom-color: var(--telecom);
+    background: var(--telecom-light);
+  }
+
+  /* ===== CONTAINER ===== */
+  .container { max-width: 920px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* ===== SECTION ===== */
+  .section {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+  }
+  .section:hover { box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+  .section-header {
+    padding: 22px 28px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-icon {
+    width: 48px; height: 48px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    transition: var(--transition);
+  }
+  .section-header h3 { font-size: 20px; font-weight: 700; }
+  .section-body { padding: 24px 28px; }
+  .section-body > p { margin-bottom: 14px; color: var(--text-light); font-size: 15px; }
+  .section-body > p:last-child { margin-bottom: 0; }
+
+  /* Icon Colors */
+  .icon-green { background: #e8f5e9; color: #2e7d32; }
+  .icon-blue { background: #e3f2fd; color: #1565c0; }
+  .icon-orange { background: #fff3e0; color: #ef6c00; }
+  .icon-red { background: #ffebee; color: #d32f2f; }
+  .icon-purple { background: #f3e5f5; color: #8e24aa; }
+  .icon-teal { background: #e0f2f1; color: #00897b; }
+  .icon-amber { background: #fff8e1; color: #ff8f00; }
+  .icon-pink { background: #fce4ec; color: #c2185b; }
+  .icon-telecom { background: var(--telecom-light); color: var(--telecom); }
+
+  /* ===== GRIDS ===== */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .hero { padding: 50px 20px 40px; }
+    .section-body { padding: 18px 16px; }
+    .section-header { padding: 16px 18px; }
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ===== INFO CARDS ===== */
+  .info-card {
+    background: #fafbfc;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 18px 20px;
+    transition: var(--transition);
+  }
+  .info-card:hover { background: #f5f7fa; border-color: #d0d5dd; }
+  .info-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .info-card p, .info-card li { font-size: 14px; color: var(--text-light); line-height: 1.7; }
+
+  /* ===== STAT ROW ===== */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 14px;
+    margin: 18px 0;
+  }
+  .stat-item {
+    background: linear-gradient(135deg, var(--primary-light) 0%, #dcedc8 100%);
+    border-radius: var(--radius-sm);
+    padding: 20px 14px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid transparent;
+  }
+  .stat-item:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(13,107,53,0.12); border-color: #c8e6c9; }
+  .stat-num { font-size: 30px; font-weight: 900; color: var(--primary); line-height: 1.2; }
+  .stat-num small { font-size: 15px; font-weight: 500; }
+  .stat-label { font-size: 12.5px; color: var(--text-light); margin-top: 4px; }
+
+  /* ===== TABLE ===== */
+  .table-wrap { overflow-x: auto; margin: 14px 0; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { background: #f8fafb; font-weight: 700; color: var(--text); font-size: 13px; white-space: nowrap; letter-spacing: 0.5px; text-transform: uppercase; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fafcfb; }
+  .table-striped tr:nth-child(even) td { background: #fafbfc; }
+  .table-striped tr:hover td { background: #f3f7f4; }
+
+  /* ===== ALERTS / TIPS ===== */
+  .tip, .danger, .success, .info-box {
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .tip { background: #fffbe6; border-left: 4px solid var(--accent); color: #6d5e00; }
+  .danger { background: #fff5f5; border-left: 4px solid var(--red); color: #7f1d1d; }
+  .success { background: #f0fff4; border-left: 4px solid #38a169; color: #22543d; }
+  .info-box { background: var(--telecom-light); border-left: 4px solid var(--telecom); color: #003078; }
+  .tip strong, .danger strong, .success strong, .info-box strong { font-weight: 700; }
+
+  /* ===== CHECKLIST ===== */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li {
+    padding: 9px 0 9px 30px;
+    position: relative;
+    font-size: 14px;
+    color: var(--text-light);
+    border-bottom: 1px dashed #eef1f5;
+    transition: var(--transition);
+  }
+  .checklist li:hover { color: var(--text); }
+  .checklist li::before {
+    content: '';
+    position: absolute; left: 2px; top: 13px;
+    width: 16px; height: 16px;
+    border: 2px solid #c0c8d2;
+    border-radius: 4px;
+    transition: var(--transition);
+  }
+  .checklist li:hover::before { border-color: var(--primary); }
+  .checklist li:last-child { border-bottom: none; }
+
+  /* ===== TELECOM SECTION (SPECIAL) ===== */
+  .telecom-section {
+    background: linear-gradient(170deg, #ffffff 0%, #f5f8ff 50%, #e8f0ff 100%);
+    border: 2px solid #bdd0f5;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 28px;
+    overflow: hidden;
+    position: relative;
+  }
+  .telecom-section::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(0,85,212,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .telecom-header {
+    background: var(--telecom-gradient);
+    color: white;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+  .telecom-header::after {
+    content: '';
+    position: absolute;
+    right: -30px; top: -50%;
+    width: 200px; height: 200%;
+    background: rgba(255,255,255,0.05);
+    transform: skewX(-15deg);
+  }
+  .telecom-header .icon-wrap {
+    width: 50px; height: 50px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+  .telecom-header h3 { font-size: 21px; font-weight: 700; letter-spacing: 0.5px; position: relative; z-index: 1; }
+  .telecom-header .tag {
+    display: inline-block;
+    background: #ffd54f;
+    color: #5d3a00;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: 8px;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,213,79,0.5); }
+    50% { box-shadow: 0 0 0 10px rgba(255,213,79,0); }
+  }
+  .telecom-body { padding: 26px 28px; position: relative; z-index: 1; }
+
+  /* ===== COMPARISON TABLE ===== */
+  .compare-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 16px 0; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .compare-table th { padding: 14px 16px; font-size: 14px; font-weight: 700; text-align: center; border: none; }
+  .compare-table th.col-telecom { background: var(--telecom-gradient); color: white; }
+  .compare-table th.col-mobile { background: #f5f5f5; color: #666; }
+  .compare-table th.col-feature { background: #fafbfc; color: var(--text); text-align: left; }
+  .compare-table td { padding: 13px 16px; font-size: 14px; text-align: center; border-bottom: 1px solid #eef1f5; }
+  .compare-table td.col-feature { text-align: left; font-weight: 600; color: var(--text); }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table .check-mark { color: #38a169; font-size: 18px; font-weight: bold; }
+  .compare-table .cross-mark { color: #ddd; font-size: 18px; }
+  .compare-table .highlight-cell { background: #f0fff4; }
+  .compare-table tr:hover td { background: #fafcfb; }
+  .compare-table tr:hover td.highlight-cell { background: #e6ffed; }
+
+  /* ===== BENEFIT CARDS ===== */
+  .benefit-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 18px 0; }
+  .benefit-card {
+    text-align: center;
+    padding: 24px 16px;
+    border-radius: var(--radius-sm);
+    background: white;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+  .benefit-card .benefit-icon {
+    width: 56px; height: 56px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+  }
+  .benefit-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .benefit-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+  /* ===== QA LIST ===== */
+  .qa-item {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  .qa-item:hover { border-color: #bdd0f5; }
+  .qa-q {
+    padding: 16px 20px;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--telecom);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fafcff;
+  }
+  .qa-q .q-icon { color: var(--telecom); font-size: 18px; }
+  .qa-a {
+    padding: 0 20px 16px;
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* ===== HIGHLIGHT BOX ===== */
+  .highlight-box {
+    background: linear-gradient(135deg, #fffde7 0%, #fff8e1 50%, #fff3cd 100%);
+    border: 2px solid #ffcc02;
+    border-radius: var(--radius-sm);
+    padding: 22px 24px;
+    margin: 18px 0;
+    text-align: center;
+  }
+  .highlight-box h4 { font-size: 18px; color: #b45309; margin-bottom: 8px; }
+  .highlight-box p { font-size: 14px; color: #92400e; }
+
+  /* ===== CONTACT CARD ===== */
+  .contact-card {
+    background: var(--telecom-gradient);
+    color: white;
+    border-radius: var(--radius-sm);
+    padding: 24px 28px;
+    margin: 18px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 180px; height: 180px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+  }
+  .contact-card::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 120px; height: 120px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .contact-card * { position: relative; z-index: 1; }
+  .contact-card h4 { font-size: 19px; font-weight: 700; margin-bottom: 8px; }
+  .contact-card p { font-size: 14px; opacity: 0.9; margin-bottom: 4px; }
+  .contact-card .contact-phone {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 8px 0;
+    color: #ffd54f;
+  }
+  .contact-card .qr-hint {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 8px;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline { position: relative; padding-left: 32px; margin: 16px 0; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 11px; top: 8px; bottom: 8px;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--telecom), #90caf9);
+    border-radius: 3px;
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 18px;
+    background: #fafcff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+  }
+  .timeline-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -25px; top: 20px;
+    width: 12px; height: 12px;
+    background: var(--telecom);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--telecom);
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item h4 { font-size: 15px; color: var(--telecom); font-weight: 700; margin-bottom: 4px; }
+  .timeline-item p { font-size: 13.5px; color: var(--text-light); }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+    padding: 40px 20px 50px;
+    color: var(--text-muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+  .footer .love { color: #e53935; animation: heartbeat 1.5s infinite; display: inline-block; }
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.15); }
+  }
+
+  /* ===== SCROLL TO TOP ===== */
+  .scroll-top {
+    position: fixed;
+    bottom: 30px; right: 30px;
+    width: 46px; height: 46px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 16px rgba(13,107,53,0.35);
+    transition: var(--transition);
+    opacity: 0;
+    pointer-events: none;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .scroll-top.visible { opacity: 1; pointer-events: auto; }
+  .scroll-top:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(13,107,53,0.45); background: #0a5a2c; }
+
+  /* ===== DETAIL LINK ===== */
+  .section-footer {
+    padding: 16px 28px 22px;
+    border-top: 1px solid var(--border);
+    text-align: right;
+    background: #fafcfb;
+  }
+  .detail-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 22px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(13,107,53,0.25);
+  }
+  .detail-link:hover {
+    background: #0a5a2c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13,107,53,0.35);
+  }
+  .detail-link-telecom {
+    background: var(--telecom-gradient);
+    box-shadow: 0 2px 8px rgba(0,85,212,0.3);
+  }
+  .detail-link-telecom:hover {
+    background: linear-gradient(135deg, #002f7a 0%, #0045b0 50%, #1a6aff 100%);
+    box-shadow: 0 6px 20px rgba(0,85,212,0.45);
+  }
+
+  /* ===== UTILITY ===== */
+  h4 { font-size: 16px; margin: 18px 0 10px; color: var(--text); font-weight: 700; }
+  ul, ol { padding-left: 24px; margin: 8px 0; }
+  li { font-size: 14.5px; color: var(--text-light); margin-bottom: 5px; }
+  strong { font-weight: 700; color: var(--text); }
+  .text-telecom { color: var(--telecom); font-weight: 600; }
+  .text-danger { color: var(--red); font-weight: 600; }
+  .text-success { color: #38a169; font-weight: 600; }
+  .text-muted { color: var(--text-muted); font-size: 13px; }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .badge-hot { background: #ffebee; color: #d32f2f; }
+  .badge-new { background: #e8f5e9; color: #2e7d32; }
+  .badge-recommend { background: #fff3e0; color: #ef6c00; }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .nav-bar, .scroll-top { display: none !important; }
+    .hero { padding: 30px 24px; }
+    .section { break-inside: avoid; margin-bottom: 16px; box-shadow: none; border: 1px solid #ddd; }
+    body { background: white; }
+    .telecom-section { border: 1px solid #ccc; }
+    .qr-card { break-inside: avoid; border: 1px solid #ddd; box-shadow: none; }
+  }
+
+  /* ===== QR CODE SECTION ===== */
+  .qr-section {
+    max-width: 920px;
+    margin: 0 auto 0;
+    padding: 0 20px;
+  }
+  .qr-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .qr-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 160px; height: 160px;
+    background: radial-gradient(circle, rgba(13,107,53,0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .qr-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .qr-card .qr-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 22px;
+  }
+  .qr-card .qr-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
+  .qr-card .qr-code-wrap {
+    background: white;
+    padding: 14px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  .qr-card .qr-code-wrap canvas,
+  .qr-card .qr-code-wrap img {
+    display: block;
+    width: 180px;
+    height: 180px;
+  }
+  .qr-card .qr-info {
+    text-align: left;
+    position: relative;
+    z-index: 1;
+  }
+  .qr-card .qr-info p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+  .qr-card .qr-info .qr-tip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .qr-card .qr-url {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 18px;
+    background: #f5f7fa;
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--text-light);
+    word-break: break-all;
+    max-width: 100%;
+  }
+  @media (max-width: 600px) {
+    .qr-card .qr-row { flex-direction: column; gap: 20px; text-align: center; }
+    .qr-card .qr-info { text-align: center; }
+    .qr-card .qr-code-wrap canvas,
+    .qr-card .qr-code-wrap img { width: 150px; height: 150px; }
+  }
+
+  /* ===== TELECOM VS MOBILE BIG COMPARISON ===== */
+  .vs-banner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .vs-side {
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .vs-side.telecom-side {
+    background: linear-gradient(135deg, #e8f0ff 0%, #d4e4ff 100%);
+    border: 2px solid var(--telecom);
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  }
+  .vs-side.mobile-side {
+    background: #fafafa;
+    border: 2px solid #e0e0e0;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+  .vs-divider {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 900;
+    color: #fff;
+    background: var(--red);
+    width: 48px;
+    align-self: stretch;
+    z-index: 1;
+    letter-spacing: 0;
+  }
+  .vs-side h4 { font-size: 18px; margin-bottom: 10px; }
+  .vs-side .speed { font-size: 36px; font-weight: 900; }
+  .vs-side .speed-label { font-size: 13px; color: var(--text-light); }
+  .vs-side ul { list-style: none; padding: 0; text-align: left; display: inline-block; margin: 12px 0 0; }
+  .vs-side ul li { padding: 4px 0; font-size: 13.5px; }
+  .telecom-side h4 { color: var(--telecom); }
+  .telecom-side .speed { color: var(--telecom); }
+  .mobile-side h4 { color: #999; }
+  .mobile-side .speed { color: #999; }
+  @media (max-width: 640px) {
+    .vs-banner { grid-template-columns: 1fr; }
+    .vs-divider { width: 100%; }
+    .vs-side.telecom-side { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+    .vs-side.mobile-side { border-radius: 0 0 var(--radius-sm) var(--radius-sm); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="hero-badge">🎓 2026级新生专属 · 学长学姐倾心整理</div>
+  <h1>无锡太湖学院<br><span class="accent">新生全攻略</span></h1>
+  <p class="hero-subtitle">🏔️ 森林公园里的大学 · 从入学到毕业，这一份就够了</p>
+  <p class="hero-meta">📍 江苏省无锡市滨湖区钱荣路68号 ｜ 📅 更新于 2026年7月 ｜ 🌿 2000亩森林校园</p>
+</header>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav-bar" id="navbar">
+  <div class="nav-inner">
+    <a href="#s-intro">🏫 学校简介</a>
+    <a href="#s-checkin">📋 报到须知</a>
+    <a href="#s-dorm">🏠 宿舍指南</a>
+    <a href="#s-food">🍽️ 美食攻略</a>
+    <a href="#s-telecom" class="nav-telecom">📱 校园卡攻略</a>
+    <a href="#s-military">🪖 军训手册</a>
+    <a href="#s-study">📚 学习攻略</a>
+    <a href="#s-club">🎭 社团活动</a>
+    <a href="#s-transit">🚇 交通出行</a>
+    <a href="#s-life">📦 生活服务</a>
+    <a href="#s-packing">🎒 必备清单</a>
+    <a href="#s-safety">🚨 防骗指南</a>
+    <a href="#s-fun">🏞️ 周边玩乐</a>
+  </div>
+</nav>
+
+<main class="container">
+
+<!-- ===== 1. 学校简介 ===== -->
+<section class="section" id="s-intro">
+  <div class="section-header">
+    <div class="section-icon icon-green">🏫</div>
+    <h3>学校简介</h3>
+  </div>
+  <div class="section-body">
+    <p>无锡太湖学院是经教育部批准建立的<strong>全日制多学科应用型本科高校</strong>，前身为江南大学太湖学院（2002年建校）。学校坐落于<strong>惠山国家级森林公园</strong>内，占地约2000亩，森林覆盖率超80%，被誉为<strong>"花园中的大学"</strong>。现有师生 <strong>25000余人</strong>，18个教学单位，40余个本科专业。</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><div class="stat-num">2000<small> 亩</small></div><div class="stat-label">森林校园面积</div></div>
+      <div class="stat-item"><div class="stat-num">25000<small>+</small></div><div class="stat-label">在校师生</div></div>
+      <div class="stat-item"><div class="stat-num">18</div><div class="stat-label">教学单位</div></div>
+      <div class="stat-item"><div class="stat-num">40<small>+</small></div><div class="stat-label">本科专业</div></div>
+      <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">国家一流专业</div></div>
+      <div class="stat-item"><div class="stat-num">98<small>%+</small></div><div class="stat-label">毕业生就业率</div></div>
+    </div>
+
+    <h4>🏆 学校荣誉</h4>
+    <ul>
+      <li>2025 软科中国大学排名全国同类高校<strong>第五</strong>，江苏省同类高校<strong>第一</strong></li>
+      <li>全国五一劳动奖状 · 中国产学研合作创新示范基地 · 全国应用型高校创新创业示范校</li>
+      <li>硕士学位授予权立项建设单位（2017年）</li>
+      <li>与英国西苏格兰大学联合成立<strong>苏格兰学院</strong>，可获中英双学位</li>
+      <li>与阿里巴巴、中兴通讯、红豆集团等共建教学基地<strong>398个</strong>，产业学院10个</li>
+    </ul>
+
+    <h4>⭐ 国家级一流本科专业（5个）</h4>
+    <p>物联网工程 · 机械工程 · 会计学 · 国际经济与贸易 · 视觉传达设计</p>
+    <p class="text-muted">另有18个省级一流本科专业：计算机科学与技术、通信工程、自动化、土木工程、护理学、数字媒体艺术等</p>
+
+    <div class="tip"><strong>📖 校训：</strong>自强不息 · 经世致用</div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/01_school_intro.html" class="detail-link">📖 查看学校简介详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 2. 报到须知 ===== -->
+<section class="section" id="s-checkin">
+  <div class="section-header">
+    <div class="section-icon icon-blue">📋</div>
+    <h3>开学报到须知</h3>
+  </div>
+  <div class="section-body">
+    <div class="grid-2">
+      <div class="info-card">
+        <h4>📅 报到时间节点</h4>
+        <p><strong>9月11日-12日</strong> 新生报到<br>
+        <strong>9月13日-14日</strong> 入学教育 & 体检<br>
+        <strong>9月15日</strong> 正式上课 🎉</p>
+      </div>
+      <div class="info-card">
+        <h4>🚌 接站安排</h4>
+        <p>报到日 <strong>8:00 - 20:00</strong>，学校在：<br>
+        ✅ <strong>无锡火车站北广场</strong><br>
+        ✅ <strong>无锡中央车站</strong><br>
+        ✅ <strong>无锡东站</strong><br>
+        设有新生接待处，<strong>专车免费接送</strong>！</p>
+      </div>
+    </div>
+    <div class="danger"><strong>⚠️ 报到必带证件（缺一不可）：</strong>录取通知书 · 身份证原件及复印件×5 · 高考准考证 · 一寸/二寸证件照各10张 · 团员档案/学生档案 · 银行卡 · 少量现金</div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/02_checkin.html" class="detail-link">📋 查看报到须知详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 3. 宿舍指南 ===== -->
+<section class="section" id="s-dorm">
+  <div class="section-header">
+    <div class="section-icon icon-orange">🏠</div>
+    <h3>宿舍生活指南</h3>
+  </div>
+  <div class="section-body">
+    <div class="table-wrap">
+      <table class="table-striped">
+        <tr><th>项目</th><th>详情</th></tr>
+        <tr><td>🏢 宿舍类型</td><td>2人间 / 4人间 / 6人间（以4人间和6人间为主）</td></tr>
+        <tr><td>🛏️ 床铺尺寸</td><td><strong>1.95m × 0.9m</strong>（买床上用品注意尺寸！）</td></tr>
+        <tr><td>❄️ 空调</td><td><span class="text-success">✅ 全覆盖</span>，所有宿舍均配备空调</td></tr>
+        <tr><td>🚿 独立卫浴</td><td>新建北区宿舍基本都有独立卫浴；部分老楼为公共卫浴</td></tr>
+        <tr><td>🔌 基础设施</td><td>饮水机 · 洗衣机 · 吹风机 · 原木书桌 · 智能门禁系统</td></tr>
+        <tr><td>⏰ 管理方式</td><td>24小时公寓化管理，不得随意调换宿舍；通常23:00断电断网</td></tr>
+      </table>
+    </div>
+    <div class="tip"><strong>💡 宿舍小贴士：</strong>建议自备<strong>床帘、蚊帐、正规品牌插排（3-4孔）</strong>，床上用品可自带也可到校购买。北区新建宿舍条件更好，分到哪栋楼看运气！</div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/03_dorm.html" class="detail-link">🏠 查看宿舍指南详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 4. 美食攻略 ===== -->
+<section class="section" id="s-food">
+  <div class="section-header">
+    <div class="section-icon icon-red">🍽️</div>
+    <h3>食堂美食攻略</h3>
+  </div>
+  <div class="section-body">
+    <div class="grid-4">
+      <div class="info-card" style="text-align:center;">
+        <h4 style="justify-content:center;">🍚 南苑食堂</h4>
+        <p>南区核心食堂<br>品种最丰富</p>
+      </div>
+      <div class="info-card" style="text-align:center;">
+        <h4 style="justify-content:center;">🍜 安佳食堂</h4>
+        <p>中区热门之选<br>性价比之王</p>
+      </div>
+      <div class="info-card" style="text-align:center;">
+        <h4 style="justify-content:center;">🥘 北苑食堂</h4>
+        <p>北区首选<br>环境最佳</p>
+      </div>
+      <div class="info-card" style="text-align:center;">
+        <h4 style="justify-content:center;">🍕 北美食堂</h4>
+        <p>风味小吃天堂<br>各地美食汇聚</p>
+      </div>
+    </div>
+    <p style="margin-top:14px;">✨ 特色系列：<strong>"称心如意"</strong>自选称重餐 · <strong>"蒸蒸日上"</strong>蒸制早餐 · <strong>"面面俱到"</strong>筋道面条</p>
+    <p>南、中、北区各有<strong>商业街</strong>，中式热炒、传统小吃、创意料理、西式快餐、奶茶咖啡一应俱全。学校还会举办<strong>校园美食节</strong> 🎉</p>
+    <div class="tip"><strong>💰 伙食费参考：</strong>食堂一餐约 8-15 元，月伙食费约 800-1200 元就能吃得非常不错！</div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/04_food.html" class="detail-link">🍽️ 查看美食攻略详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 5. 📱 校园卡攻略 —— 核心推广内容 ===== -->
+<section class="telecom-section" id="s-telecom">
+  <div class="telecom-header">
+    <div class="icon-wrap">📱</div>
+    <h3>校园卡办理攻略 <span class="tag">🔥 新生必读</span></h3>
+  </div>
+  <div class="telecom-body">
+
+    <!-- 痛点引入 -->
+    <p style="font-size:16px;font-weight:500;color:var(--text);">每年开学季，校园营业厅门口都会排起<strong style="color:#d32f2f;">几百米的长队</strong>，在烈日下等2-3小时是常态。作为过来人的忠告：<strong style="color:var(--telecom);">暑假提前办好，开学直接享受！</strong></p>
+
+    <!-- 暑期办卡 vs 开学办卡对比 -->
+    <h4 style="font-size:17px;">🔥 暑期提前办卡 vs 开学排队办卡</h4>
+    <div class="grid-2">
+      <div class="info-card" style="background: linear-gradient(135deg, #f0fff4 0%, #e8f5e9 100%); border-color: #a5d6a7;">
+        <h4 style="color:#2e7d32;">✅ 暑期提前办理（推荐）</h4>
+        <ul style="color:#2e7d32;">
+          <li>📱 <strong>足不出户</strong>，线上申请，卡片包邮到家</li>
+          <li>⏱️ <strong>0排队</strong>，暑假就能激活使用</li>
+          <li>🎁 享受<strong>暑期专属福利</strong>和优惠套餐</li>
+          <li>📞 提前选号，<strong>靓号随心挑</strong></li>
+          <li>🏫 到校即用，<strong>报到当天就能畅快上网</strong></li>
+          <li>💆 开学从容不迫，不用在烈日下暴晒排队</li>
+        </ul>
+      </div>
+      <div class="info-card" style="background: #fff5f5; border-color: #ffcdd2;">
+        <h4 style="color:#c62828;">❌ 开学当天排队办理</h4>
+        <ul style="color:#c62828;">
+          <li>☀️ 9月无锡高温，<strong>暴晒排队2-3小时</strong></li>
+          <li>😫 人山人海，<strong>队伍长达几百米</strong></li>
+          <li>📋 报到当天事情本来就多，手忙脚乱</li>
+          <li>🔢 好号码<strong>早就被提前办卡的同学选完</strong></li>
+          <li>😰 办完卡还要等激活，<strong>当天不一定能用</strong></li>
+          <li>💢 身心俱疲，破坏开学好心情</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 电信 vs 移动大对比 -->
+    <h4 style="font-size:17px;margin-top:22px;">⚡ 电信 vs 移动 —— 无锡太湖学院实测对比</h4>
+    <p style="margin-bottom:12px;color:var(--text-light);">以下对比基于无锡太湖学院校内<strong>学生真实使用反馈</strong>及技术参数：</p>
+
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="col-feature">对比维度</th>
+            <th class="col-telecom">🔵 中国电信</th>
+            <th class="col-mobile">🟢 中国移动</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-feature">🏫 校内基站</td>
+            <td class="highlight-cell"><span class="check-mark">✅</span> <strong>校内建有专属基站</strong></td>
+            <td><span class="cross-mark">❌</span> 校内无独立基站，依赖校外信号</td>
+          </tr>
+          <tr>
+            <td class="col-feature">⚡ 网络速度</td>
+            <td class="highlight-cell"><span class="check-mark">✅</span> <strong>全校最快</strong>，下载/上传稳定</td>
+            <td><span class="cross-mark">❌</span> 速度不稳定，高峰期明显降速</td>
+          </tr>
+          <tr>
+            <td class="col-feature">📶 信号稳定性</td>
+            <td class="highlight-cell"><span class="check-mark">✅</span> <strong>FDD-LTE制式</strong>，全覆盖不断流</td>
+            <td><span class="cross-mark">⚠️</span> TDD-LTE制式，存在"断流"问题</td>
+          </tr>
+          <tr>
+            <td class="col-feature">🏢 宿舍信号</td>
+            <td class="highlight-cell"><span class="check-mark">✅</span> 满格覆盖，<strong>各宿舍楼信号强劲</strong></td>
+            <td><span class="cross-mark">⚠️</span> 部分宿舍楼信号偏弱，甚至无信号</td>
+          </tr>
+          <tr>
+            <td class="col-feature">📚 教学楼/图书馆</td>
+            <td class="highlight-cell"><span class="check-mark">✅</span> 室内覆盖完善</td>
+            <td><span class="cross-mark">⚠️</span> 部分教室/图书馆角落信号差</td>
+          </tr>
+          <tr>
+            <td class="col-feature">🎮 游戏/视频体验</td>
+            <td class="highlight-cell"><span class="check-mark">✅</span> <strong>延迟低</strong>，打游戏不卡顿</td>
+            <td><span class="cross-mark">⚠️</span> 延迟波动大，偶尔掉线</td>
+          </tr>
+          <tr>
+            <td class="col-feature">👥 学生口碑</td>
+            <td class="highlight-cell"><span class="check-mark">✅</span> <strong>"电信yyds"</strong> —— 多数学生推荐</td>
+            <td><span class="cross-mark">⚠️</span> "移动会断流，换了电信" —— 大量转网</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 技术优势 -->
+    <div class="info-box">
+      <strong>📡 技术小科普：</strong>中国电信采用<strong>FDD-LTE</strong>制式，理论下行速率更高、信号穿透力更强；而移动采用TDD-LTE制式，在建筑密集的校园环境中劣势明显。加上电信在无锡太湖学院<strong>校内建有独立基站</strong>，而移动依赖校外基站覆盖，这就是为什么电信网速更快更稳的根本原因。
+    </div>
+
+    <!-- 学生口碑 -->
+    <div class="tip">
+      <strong>💬 太湖学院学长学姐真实评价：</strong><br>
+      🗣️ <em>"电信 yyds！大一用的移动卡，经常断流，换了电信后流畅到飞起"</em><br>
+      🗣️ <em>"宿舍移动经常没信号，室友都是电信，打游戏从来不卡"</em><br>
+      🗣️ <em>"强烈建议暑假就把电信卡办了，开学不用排队，直接就能用"</em>
+    </div>
+
+    <!-- 暑期办理流程 -->
+    <h4 style="font-size:17px;margin-top:22px;">📋 暑期提前办卡流程（超简单！）</h4>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>📱 第一步：联系电信校园代理</h4>
+        <p>联系校内的<strong>电信校园代理学长学姐</strong>，他们可以帮你选最优惠的套餐并全程指导办卡，方便又靠谱！</p>
+      </div>
+      <div class="timeline-item">
+        <h4>📋 第二步：在线选号 & 提交资料</h4>
+        <p>海量靓号任你选（生日号、连号等），上传身份证即可完成实名认证，全程线上操作。</p>
+      </div>
+      <div class="timeline-item">
+        <h4>📦 第三步：包邮到家 & 激活</h4>
+        <p>SIM卡免费包邮到家，按照说明激活即可，暑假期间就能正常使用！</p>
+      </div>
+      <div class="timeline-item">
+        <h4>🎉 第四步：开学直接用！</h4>
+        <p>9月报到当天，别人在烈日下排队，你已经用电信畅快上网、跟家人视频报平安了！</p>
+      </div>
+    </div>
+
+    <div class="info-card" style="background: #fafcff; border-color: #d0ddf0;">
+      <h4 style="color:#0055d4;">🎁 电信最新校园套餐优惠</h4>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px 20px; font-size:13.5px; color:#555;">
+        <div>🆓 <strong>前3个月免月租</strong></div>
+        <div>💰 <strong>充100送100</strong>（或充100送60）</div>
+        <div>📶 <strong>全国通用流量 180G</strong></div>
+        <div>📞 <strong>通话 1100分钟</strong></div>
+        <div>🎬 <strong>每月领2次会员</strong>（视频/音乐/奶茶券任选）</div>
+        <div>🏠 <strong>免费4年宽带</strong>，不限速，宿舍WiFi全覆盖</div>
+      </div>
+      <p style="font-size:12px;color:#999;margin-top:8px;">* 具体套餐以办卡时为准，详情咨询校园代理学长学姐</p>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-q"><span class="q-icon">❓</span> 我已经有移动的卡了，还有必要办电信校园卡吗？</div>
+      <div class="qa-a">非常有必要！太湖学院校内移动信号差、经常断流，很多同学大二都转投电信了。校园卡套餐优惠力度远大于普通卡，<strong>建议把校园电信卡作为主力上网卡</strong>，移动卡保号即可。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="q-icon">❓</span> 暑期办的卡和开学办的有区别吗？</div>
+      <div class="qa-a">套餐完全一样，但<strong>暑期办理福利更多</strong>（首月免租、靓号多、专属赠品），而且关键是不用排队！开学后营业厅一天要处理几百人，服务质量远不如暑期从容办理。</div>
+    </div>
+  </div>
+  <div class="section-footer" style="border-top:1px solid #bdd0f5;">
+    <a href="guide_detail/05_telecom.html" class="detail-link detail-link-telecom">📱 查看校园卡攻略详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 6. 军训手册 ===== -->
+<section class="section" id="s-military">
+  <div class="section-header">
+    <div class="section-icon icon-green">🪖</div>
+    <h3>军训生存手册</h3>
+  </div>
+  <div class="section-body">
+    <div class="grid-3">
+      <div class="info-card">
+        <h4>☀️ 防晒是头等大事</h4>
+        <p>SPF50+ 高倍防晒霜，随身携带，每2小时补涂一次。选不含酒精的温和配方，避免闷痘过敏。</p>
+      </div>
+      <div class="info-card">
+        <h4>💧 补水 = 续命</h4>
+        <p>1L以上大容量水杯，建议喝淡盐水补充电解质。<strong>切忌训练后立刻喝冰水！</strong></p>
+      </div>
+      <div class="info-card">
+        <h4>👟 好鞋垫救脚</h4>
+        <p>军训鞋底很硬！提前买几双<strong>运动减震鞋垫</strong>，或垫卫生巾吸汗缓冲，亲测有效！</p>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:16px;">
+      <div class="info-card">
+        <h4>💊 常备药品</h4>
+        <p>藿香正气水 · 创可贴 · 润喉糖 · 云南白药喷雾 · 感冒药 · 肠胃药 · 风油精</p>
+      </div>
+      <div class="info-card">
+        <h4>⚠️ 突发情况应对</h4>
+        <p>身体不适<strong>立刻报告教官</strong>！扭伤后不要揉搓→马上去医务室冰敷。中暑→转移到阴凉通风处，解开衣领，补充水分。</p>
+      </div>
+    </div>
+    <div class="tip"><strong>🪖 军训时间：</strong>一般为开学后立即开始，持续约2周。期间穿插反诈宣传讲座（无锡滨湖公安进校园），非常实用！</div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/06_military.html" class="detail-link">🪖 查看军训手册详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 7. 学习攻略 ===== -->
+<section class="section" id="s-study">
+  <div class="section-header">
+    <div class="section-icon icon-purple">📚</div>
+    <h3>学习攻略</h3>
+  </div>
+  <div class="section-body">
+    <div class="grid-2">
+      <div class="info-card">
+        <h4>📱 必备 APP</h4>
+        <ul>
+          <li><strong>学习通</strong> — 课程签到、作业提交</li>
+          <li><strong>PU口袋校园</strong> — 第二课堂学分</li>
+          <li><strong>闪动校园</strong> — 校园跑打卡（一定要跑满！）</li>
+          <li><strong>超级课程表</strong> — 一键导入课表</li>
+          <li><strong>中国大学MOOC</strong> — 自学补课神器</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>📖 学习避坑指南</h4>
+        <ul>
+          <li><strong>不要挂科！</strong>影响评优、入党、考研、找工作</li>
+          <li><strong>英语四六级</strong>大一是黄金期，越早过越好</li>
+          <li>图书馆考试周需早起占位，平时多去</li>
+          <li>多和学长学姐交流选课经验</li>
+          <li><strong>绩点</strong>从大一就开始抓，别等到大三后悔</li>
+        </ul>
+      </div>
+    </div>
+    <div class="danger"><strong>⚠️ 忠告：</strong>大学没人天天管你，自律是唯一的出路。大一放飞自我的，大四都在还债。</div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/07_study.html" class="detail-link">📚 查看学习攻略详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 8. 社团活动 ===== -->
+<section class="section" id="s-club">
+  <div class="section-header">
+    <div class="section-icon icon-teal">🎭</div>
+    <h3>社团与校园活动</h3>
+  </div>
+  <div class="section-body">
+    <p>开学后1-2周是<strong>"百团大战"</strong>招新季 🎪，各类社团在操场集中纳新，场面非常热闹！</p>
+    <div class="grid-3">
+      <div class="info-card" style="text-align:center;">
+        <h4 style="justify-content:center;">📱 无锡太湖学院</h4>
+        <p>学校官方公众号<br><small class="text-muted">官网：www.wxu.edu.cn</small></p>
+      </div>
+      <div class="info-card" style="text-align:center;">
+        <h4 style="justify-content:center;">🌸 太湖春晓</h4>
+        <p>学工处官方平台<br><small class="text-muted">班级群号以此为准</small></p>
+      </div>
+      <div class="info-card" style="text-align:center;">
+        <h4 style="justify-content:center;">🔥 太湖青年</h4>
+        <p>团委·社团活动发布<br><small class="text-muted">社团资讯第一手</small></p>
+      </div>
+    </div>
+    <div class="tip"><strong>💡 社团建议：</strong>社团在精不在多，选 1-2 个真正感兴趣的深耕即可。校级组织（学生会、青协、社联等）含金量高但更忙，量力而行。</div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/08_club.html" class="detail-link">🎭 查看社团活动详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 9. 交通出行 ===== -->
+<section class="section" id="s-transit">
+  <div class="section-header">
+    <div class="section-icon icon-blue">🚇</div>
+    <h3>交通出行</h3>
+  </div>
+  <div class="section-body">
+    <div class="table-wrap">
+      <table>
+        <tr><th>交通方式</th><th>详情</th></tr>
+        <tr><td>📍 地址</td><td>江苏省无锡市滨湖区钱荣路68号</td></tr>
+        <tr><td>🚌 最近公交站</td><td>东山（梅园公墓）站，步行约 456m</td></tr>
+        <tr><td>🚇 最近地铁站</td><td>地铁2号线 <strong>荣巷站</strong>，距学校约 1.8km（打车起步价）</td></tr>
+        <tr><td>🚉 火车站</td><td>无锡火车站，约 8km，打车约20分钟 / 公交直达</td></tr>
+        <tr><td>🚌 校内交通</td><td>共享单车 · 共享电动车（"蓝朋友"）· 校园小公交（1元/次）</td></tr>
+      </table>
+    </div>
+    <div class="tip"><strong>🚇 出行 A</strong>下载<strong>"灵锡"APP</strong>，可直接扫码乘坐无锡公交和地铁，非常方便。学校在长三角核心区，去上海高铁仅需30分钟！</div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/09_transit.html" class="detail-link">🚇 查看交通出行详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 10. 生活服务 ===== -->
+<section class="section" id="s-life">
+  <div class="section-header">
+    <div class="section-icon icon-amber">📦</div>
+    <h3>快递与生活服务</h3>
+  </div>
+  <div class="section-body">
+    <div class="grid-2">
+      <div class="info-card">
+        <h4>📦 快递收发</h4>
+        <p><strong>快递地址：</strong>江苏省无锡市滨湖区荣巷街道钱荣路68号无锡太湖学院</p>
+        <p>快递站：北区驿站 & 南校区驿站，凭<strong>菜鸟APP</strong>取件码取件。京东/顺丰有独立配送点。</p>
+      </div>
+      <div class="info-card">
+        <h4>🛒 生活配套</h4>
+        <p><strong>校内：</strong>超市 · 打印店 · 理发店 · 美甲店 · 水果店 · 奶茶店（蜜雪冰城、瑞幸等）</p>
+        <p><strong>校外：</strong>万达广场（约3km）· 滨湖商业街 · 惠山古镇</p>
+      </div>
+    </div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/10_life.html" class="detail-link">📦 查看生活服务详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 11. 必备清单 ===== -->
+<section class="section" id="s-packing">
+  <div class="section-header">
+    <div class="section-icon icon-pink">🎒</div>
+    <h3>新生必备物品清单</h3>
+  </div>
+  <div class="section-body">
+    <div class="grid-2">
+      <div>
+        <h4>📄 证件类</h4>
+        <ul class="checklist">
+          <li>录取通知书（最重要！）</li>
+          <li>身份证 + 复印件 ×5</li>
+          <li>高考准考证</li>
+          <li>一寸/二寸证件照各10张</li>
+          <li>团员档案 / 学生档案</li>
+          <li>银行卡 + 少量现金（300-500元）</li>
+        </ul>
+      </div>
+      <div>
+        <h4>🛏️ 宿舍用品</h4>
+        <ul class="checklist">
+          <li>床上三件套 + 被芯枕芯</li>
+          <li>床帘 + 蚊帐（必备！）</li>
+          <li>正规品牌插排（3-4孔）</li>
+          <li>台灯 / 充电磁吸灯</li>
+          <li>衣架 ×20 + 挂钩</li>
+          <li>收纳箱 / 桌面置物架</li>
+        </ul>
+      </div>
+      <div>
+        <h4>🧴 个人护理</h4>
+        <ul class="checklist">
+          <li>洗漱用品全套</li>
+          <li>洗发水 / 沐浴露 / 洗衣液</li>
+          <li>SPF50+ 防晒霜（命根子！）</li>
+          <li>拖鞋 + 运动鞋 + 日常鞋</li>
+          <li>雨伞（无锡多雨！）</li>
+          <li>指甲刀 / 小剪刀 / 针线包</li>
+        </ul>
+      </div>
+      <div>
+        <h4>💻 电子 & 学习</h4>
+        <ul class="checklist">
+          <li>笔记本电脑 + 充电器</li>
+          <li>手机 + 充电器 + 数据线</li>
+          <li>充电宝（大容量）</li>
+          <li>U盘（32G+，打印交作业）</li>
+          <li>耳机（宿舍和谐必备）</li>
+          <li>笔 + 笔记本 + 书包</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/11_packing.html" class="detail-link">🎒 查看必备清单详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 12. 防骗指南 ===== -->
+<section class="section" id="s-safety">
+  <div class="section-header">
+    <div class="section-icon icon-red">🚨</div>
+    <h3>防骗安全指南</h3>
+  </div>
+  <div class="section-body">
+    <p>学校每年军训期间联合<strong>无锡市公安局滨湖分局</strong>开展"军训场上反诈第一课"，覆盖全体5600+新生。以下内容请<strong>仔细阅读</strong>，每年都有新生上当受骗！</p>
+
+    <h4>⚠️ 六大常见骗局</h4>
+    <div class="grid-2">
+      <div class="info-card" style="border-left: 3px solid #e53935;">
+        <h4>🕳️ 1. 虚假缴费</h4>
+        <p>冒充辅导员/老师要求将学费打入某银行卡。<strong>学费仅通过学校官网或指定窗口缴纳！</strong></p>
+      </div>
+      <div class="info-card" style="border-left: 3px solid #e53935;">
+        <h4>🕳️ 2. 真假班级群</h4>
+        <p>假借"2026新生群"名义收取"入群费""资料费"。<strong>官方群以"太湖春晓"推送为准！</strong></p>
+      </div>
+      <div class="info-card" style="border-left: 3px solid #e53935;">
+        <h4>🕳️ 3. 冒充同学借钱</h4>
+        <p>混入新生群，冒充同班同学骗取信任后借钱。<strong>涉及金钱一定当面或电话核实！</strong></p>
+      </div>
+      <div class="info-card" style="border-left: 3px solid #e53935;">
+        <h4>🕳️ 4. 网络刷单</h4>
+        <p>小额返利诱骗，后以"解冻账户"为由骗取大额担保金。<strong>所有刷单都是诈骗！</strong></p>
+      </div>
+      <div class="info-card" style="border-left: 3px solid #e53935;">
+        <h4>🕳️ 5. 裸聊敲诈</h4>
+        <p>诱导下载木马APP盗取通讯录后敲诈勒索。<strong>不加陌生网友、不下载不明APP！</strong></p>
+      </div>
+    </div>
+
+    <div class="danger" style="border-radius:12px;margin-top:16px;">
+      <strong>🚨 防诈核心口诀（背下来！）：</strong><br>
+      <span style="font-size:16px;">未知链接不点击 · 陌生来电不轻信<br>个人信息不透露 · 转账汇款多核实</span>
+    </div>
+    <div class="tip"><strong>📞 紧急求助：</strong>如遇可疑情况，第一时间联系<strong>辅导员</strong>核实，或直接拨打 <strong>110</strong>。学校保卫处24小时值班电话请保存到手机通讯录。</div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/12_safety.html" class="detail-link">🚨 查看防骗指南详细信息 →</a>
+  </div>
+</section>
+
+<!-- ===== 13. 周边玩乐 ===== -->
+<section class="section" id="s-fun">
+  <div class="section-header">
+    <div class="section-icon icon-green">🏞️</div>
+    <h3>周边玩乐推荐</h3>
+  </div>
+  <div class="section-body">
+    <div class="grid-3">
+      <div class="info-card">
+        <h4>🏔️ 惠山森林公园</h4>
+        <p>学校就在公园里！天然氧吧，登山步道、晨跑、拍照都是绝佳。出门就是，免费的！</p>
+      </div>
+      <div class="info-card">
+        <h4>🌸 太湖鼋头渚</h4>
+        <p>无锡第一名片！春季樱花谷美到窒息。学校出发公交约40分钟，学生证半价。</p>
+      </div>
+      <div class="info-card">
+        <h4>🏙️ 三阳广场商圈</h4>
+        <p>无锡市中心，崇安寺、南长街、恒隆广场……地铁直达，吃喝玩乐一天逛不完。</p>
+      </div>
+    </div>
+    <div class="tip"><strong>🎉 大学四年打卡清单：</strong>灵山大佛 · 三国水浒城 · 蠡园 · 拈花湾 · 融创乐园 · 荡口古镇 · 宜兴竹海……无锡好玩的地方太多了，和室友一个个去解锁吧！</div>
+  </div>
+  <div class="section-footer">
+    <a href="guide_detail/13_fun.html" class="detail-link">🏞️ 查看周边玩乐详细信息 →</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== QR CODE SECTION ===== -->
+<div class="qr-section">
+  <div class="qr-card">
+    <h3>📱 扫码查看攻略</h3>
+    <p class="qr-subtitle">打开手机相机扫一扫，随时随地查看新生攻略</p>
+    <div class="qr-row">
+      <div class="qr-code-wrap" id="qrCodeContainer"></div>
+      <div class="qr-info">
+        <p>🔗 <strong>分享给更多新生</strong></p>
+        <p>截图此二维码发到新生群、朋友圈<br>或打印贴在迎新海报上</p>
+        <span class="qr-tip">📷 手机相机扫码即可打开</span>
+        <div class="qr-url" id="qrUrlDisplay">加载中...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>🌸 祝你大学生活充实而精彩！无锡太湖学院欢迎你 🌸</p>
+  <p style="margin-top:6px;">本攻略由在校学长学姐经验整理 · 仅供参考 · 具体以学校官方通知为准</p>
+  <p style="margin-top:4px;font-size:12px;">📱 校园卡咨询 · 暑期提前办卡免排队 · 中国电信太湖学院营业厅</p>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+<!-- QR Code Generator -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js">
+</script>
+<script>
+  // ===== QR CODE GENERATION =====
+  (function() {
+    // ★★★ 部署后把下面这行改成你的线上地址 ★★★
+    var GUIDE_URL = 'https://你的域名/新生攻略.html';
+
+    // 如果是通过服务器访问的，自动使用当前地址
+    if (window.location.protocol !== 'file:' && window.location.hostname !== '') {
+      GUIDE_URL = window.location.href.split('?')[0].split('#')[0];
+    }
+
+    var container = document.getElementById('qrCodeContainer');
+    var urlDisplay = document.getElementById('qrUrlDisplay');
+
+    if (container && window.QRCode) {
+      new QRCode(container, {
+        text: GUIDE_URL,
+        width: 180,
+        height: 180,
+        colorDark: '#0d6b35',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.M
+      });
+      urlDisplay.textContent = GUIDE_URL;
+    } else if (container) {
+      // Fallback: 使用在线API生成二维码图片
+      var img = document.createElement('img');
+      img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=0d6b35&data=' + encodeURIComponent(GUIDE_URL);
+      img.alt = 'QR Code';
+      img.style.display = 'block';
+      container.appendChild(img);
+      urlDisplay.textContent = GUIDE_URL;
+    }
+  })();
+
+  // Scroll to top button visibility
+  const scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  // Active nav item on scroll
+  const sections = document.querySelectorAll('section, .telecom-section');
+  const navLinks = document.querySelectorAll('.nav-inner a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // Smooth scroll for nav links (fallback for older browsers)
+  document.querySelectorAll('.nav-inner a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
