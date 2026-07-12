@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>扫码查看新生攻略</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0d6b35 0%, #16914a 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    max-width: 420px;
+    width: 100%;
+  }
+  .card h2 {
+    font-size: 22px;
+    color: #0d6b35;
+    margin-bottom: 6px;
+  }
+  .card .subtitle {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 24px;
+  }
+  #qrcode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    padding: 12px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: fit-content;
+  }
+  #qrcode canvas, #qrcode img {
+    display: block;
+    width: 240px !important;
+    height: 240px !important;
+  }
+  .url {
+    font-size: 12px;
+    color: #888;
+    word-break: break-all;
+    background: #f5f7fa;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 16px;
+  }
+  .tips {
+    text-align: left;
+    background: #f0fff4;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 20px;
+  }
+  .tips h4 { color: #0d6b35; margin-bottom: 8px; font-size: 15px; }
+  .tips li { font-size: 13px; color: #555; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>🎓 无锡太湖学院</h2>
+  <p class="subtitle">2026届新生全攻略 · 扫码查看</p>
+  <div id="qrcode"></div>
+  <p style="font-size:13px;color:#888;">📷 打开手机相机，扫描二维码</p>
+  <div class="url" id="urlDisplay"></div>
+  <div class="tips">
+    <h4>💡 分享方式</h4>
+    <ul>
+      <li>📱 截图发到新生群 / 朋友圈</li>
+      <li>🖨️ 打印贴到迎新海报上</li>
+      <li>📋 转发给班级辅导员</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+(function() {
+  // ★ 指向线上攻略地址
+  var GUIDE_URL = window.GUIDE_URL || 'http://bore.pub:44780/freshman-guide/';
+
+  document.getElementById('urlDisplay').textContent = '🔗 ' + GUIDE_URL;
+
+  // 使用 qrcodejs 生成
+  var script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js';
+  script.onload = function() {
+    new QRCode(document.getElementById('qrcode'), {
+      text: GUIDE_URL,
+      width: 240,
+      height: 240,
+      colorDark: '#0d6b35',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  };
+  script.onerror = function() {
+    // Fallback: use qrserver API
+    var img = document.createElement('img');
+    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=240x240&color=0d6b35&data=' + encodeURIComponent(GUIDE_URL);
+    img.alt = 'QR Code';
+    document.getElementById('qrcode').appendChild(img);
+  };
+  document.head.appendChild(script);
+})();
+</script>
+</body>
+</html>
