@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>无锡太湖学院 · 校园卡在线办理</title>
+
+<!-- ✅ 微信 / QQ 分享卡片 -->
+<meta property="og:title" content="无锡太湖学院 · 校园卡在线办理">
+<meta property="og:description" content="2026届新生专属，暑期提前办卡免排队，包邮到家！">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ✅ 移动端全屏模式 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="校园卡办理">
+<meta name="theme-color" content="#0055d4">
+
+<style>
+  :root {
+    --telecom: #0055d4;
+    --telecom-dark: #003da5;
+    --telecom-gradient: linear-gradient(160deg, #003da5 0%, #0055d4 40%, #2979ff 100%);
+    --gold: #ffb300;
+    --gold-light: #fff8e1;
+    --text: #1a1a2e;
+    --text-light: #555;
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --radius: 18px;
+    --radius-sm: 12px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 20px 16px;
+  }
+
+  /* ── 背景装饰 ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,85,212,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 50% 100%, rgba(0,61,165,0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* ── 主卡片 ── */
+  .main-card {
+    position: relative; z-index: 1;
+    width: 100%; max-width: 400px;
+    background: var(--card);
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+    overflow: hidden;
+    animation: cardIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── 顶部蓝色区域 ── */
+  .card-header {
+    background: var(--telecom-gradient);
+    color: #fff;
+    padding: 32px 24px 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-header::after {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 160px; height: 160px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .card-header::before {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: -30px;
+    width: 100px; height: 100px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .card-header * { position: relative; z-index: 1; }
+
+  .logo-row {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin-bottom: 14px;
+  }
+  .logo-icon {
+    width: 48px; height: 48px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px;
+    backdrop-filter: blur(10px);
+  }
+  .school-name {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.85;
+    letter-spacing: 2px;
+  }
+
+  .card-header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .card-header .subtitle {
+    font-size: 13px;
+    opacity: 0.8;
+    font-weight: 300;
+  }
+
+  /* ── 福利标签 ── */
+  .badge-row {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    justify-content: center;
+    margin-top: 14px;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  /* ── 内容区 ── */
+  .card-body {
+    padding: 24px 22px 10px;
+  }
+
+  .feature-list {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+  .feature-list li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 14px;
+    background: #f8fafd;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    color: var(--text-light);
+    transition: background 0.2s;
+  }
+  .feature-list li:active { background: #eef3fa; }
+  .feature-list .feat-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .fi-blue   { background: #e8f0ff; }
+  .fi-green  { background: #e8f5e9; }
+  .fi-orange { background: #fff3e0; }
+  .fi-purple { background: #f3e5f5; }
+
+  /* ── 主按钮 ── */
+  .btn-wrap {
+    padding: 16px 22px 24px;
+  }
+  .btn-primary {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%;
+    padding: 16px;
+    background: var(--telecom-gradient);
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(0,85,212,0.35);
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn-primary::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+  .btn-primary:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 12px rgba(0,85,212,0.25);
+  }
+  .btn-primary:active::after {
+    transform: translateX(100%);
+  }
+  .btn-arrow {
+    font-size: 18px;
+    transition: transform 0.2s;
+  }
+  .btn-primary:active .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  /* ── 底部文案 ── */
+  .card-footer {
+    text-align: center;
+    padding: 0 22px 22px;
+    font-size: 12px;
+    color: #aaa;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .card-footer .dot {
+    width: 6px; height: 6px;
+    background: #4caf50;
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.4; transform: scale(1.5); }
+  }
+
+  /* ── 微信提示条 ── */
+  .wechat-tip {
+    position: relative; z-index: 1;
+    width: 100%; max-width: 400px;
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #fffbf0;
+    border: 1px solid #ffe082;
+    border-radius: 12px;
+    font-size: 12.5px;
+    color: #8d6e00;
+    text-align: center;
+    display: none; /* 微信内才显示 */
+  }
+  .wechat-tip.show { display: block; animation: cardIn 0.5s 0.3s ease both; }
+
+  /* ── 加载遮罩 ── */
+  .loading-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(255,255,255,0.9);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 14px;
+    transition: opacity 0.3s;
+  }
+  .loading-overlay.hidden {
+    opacity: 0; pointer-events: none;
+  }
+  .spinner {
+    width: 36px; height: 36px;
+    border: 3px solid #e0e0e0;
+    border-top-color: var(--telecom);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-text { font-size: 14px; color: #888; }
+
+  /* ── Toast 提示 ── */
+  .toast {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    z-index: 9999;
+    background: #333; color: #fff;
+    padding: 10px 22px;
+    border-radius: 20px;
+    font-size: 13px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .toast.show { opacity: 1; }
+
+  /* ── 响应式微调 ── */
+  @media (max-width: 360px) {
+    .card-header { padding: 24px 18px 22px; }
+    .card-header h1 { font-size: 20px; }
+    .card-body { padding: 18px 16px 6px; }
+    .btn-wrap { padding: 12px 16px 20px; }
+    .feature-list li { font-size: 13px; padding: 10px 12px; }
+  }
+
+  @media (min-width: 768px) {
+    /* 平板/桌面居中微调 */
+    body { padding: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 加载遮罩 -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="spinner"></div>
+  <div class="loading-text">加载中...</div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- 主卡片 -->
+<div class="main-card">
+
+  <!-- 顶部 -->
+  <div class="card-header">
+    <div class="logo-row">
+      <div class="logo-icon">🏫</div>
+    </div>
+    <div class="school-name">无锡太湖学院</div>
+    <h1>2026新生校园卡</h1>
+    <div class="subtitle">暑期线上办理 · 免排队 · 包邮到家</div>
+    <div class="badge-row">
+      <span class="badge">🎁 前3月免月租</span>
+      <span class="badge">📶 180G流量</span>
+      <span class="badge">📞 1100分钟</span>
+    </div>
+  </div>
+
+  <!-- 内容 -->
+  <div class="card-body">
+    <ul class="feature-list">
+      <li>
+        <span class="feat-icon fi-blue">📱</span>
+        <span>线上选号，<strong>靓号随心挑</strong></span>
+      </li>
+      <li>
+        <span class="feat-icon fi-green">🚚</span>
+        <span>SIM卡<strong>包邮到家</strong>，暑假激活</span>
+      </li>
+      <li>
+        <span class="feat-icon fi-orange">🏫</span>
+        <span>校内<strong>独立基站</strong>，宿舍满格信号</span>
+      </li>
+      <li>
+        <span class="feat-icon fi-purple">🎬</span>
+        <span>每月领<strong>2次视频会员</strong></span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 按钮 -->
+  <div class="btn-wrap">
+    <button class="btn-primary" id="btnApply" onclick="handleApply()">
+      <span>立即办理</span>
+      <span class="btn-arrow">→</span>
+    </button>
+  </div>
+
+  <!-- 底部 -->
+  <div class="card-footer">
+    <span class="dot"></span>
+    <span>中国电信 · 官方校园套餐</span>
+  </div>
+</div>
+
+<!-- 微信内提示 -->
+<div class="wechat-tip" id="wechatTip">
+  💡 <strong>提示：</strong>点击「立即办理」后将跳转至电信官方页面。若无法自动打开APP，请点击页面上的<b>「打开电信APP」</b>按钮，或<b>点击右上角 "…" → 在浏览器中打开</b>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ── 目标链接 ──
+  var TELECOM_URL = 'https://a.189.cn/j3JQZb';
+
+  // ── 检测微信浏览器 ──
+  function isWechat() {
+    var ua = navigator.userAgent || '';
+    return /MicroMessenger/i.test(ua);
+  }
+
+  // ── 检测是否支持唤起APP (粗略判断) ──
+  function isIOS() {
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
+
+  // ── 隐藏加载遮罩 ──
+  function hideLoading() {
+    var el = document.getElementById('loadingOverlay');
+    if (el) {
+      el.classList.add('hidden');
+      setTimeout(function() { el.remove(); }, 400);
+    }
+  }
+
+  // ── Toast ──
+  function showToast(msg) {
+    var t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2000);
+  }
+
+  // ── 主逻辑：跳转 ──
+  window.handleApply = function() {
+    var btn = document.getElementById('btnApply');
+    // 防止重复点击
+    if (btn.disabled) return;
+    btn.disabled = true;
+    btn.innerHTML = '<span>跳转中...</span><span class="btn-arrow">⏳</span>';
+    btn.style.opacity = '0.7';
+
+    // 记录点击时间（用于判断回来时是否成功唤起APP）
+    var clickTime = Date.now();
+
+    // 直接跳转到电信链接
+    // 电信页面会自动处理：微信内显示引导，浏览器内唤起APP
+    window.location.href = TELECOM_URL;
+
+    // 如果3秒后还在当前页面（跳转失败），恢复按钮
+    setTimeout(function() {
+      if (Date.now() - clickTime > 2500) {
+        // 可能跳转成功了，不做处理
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = '<span>立即办理</span><span class="btn-arrow">→</span>';
+        btn.style.opacity = '1';
+      }
+    }, 3000);
+  };
+
+  // ── 微信环境特殊处理 ──
+  if (isWechat()) {
+    var tip = document.getElementById('wechatTip');
+    if (tip) tip.classList.add('show');
+  }
+
+  // ── 页面就绪 ──
+  // 页面本身加载很快，延迟一下遮罩让过渡自然
+  window.addEventListener('load', function() {
+    setTimeout(hideLoading, 400);
+  });
+  // 兜底：最多1.5秒后强制隐藏
+  setTimeout(hideLoading, 1500);
+
+  // ── 页面可见性变化时（从APP切回来）恢复按钮 ──
+  document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+      var btn = document.getElementById('btnApply');
+      if (btn && btn.disabled) {
+        setTimeout(function() {
+          btn.disabled = false;
+          btn.innerHTML = '<span>立即办理</span><span class="btn-arrow">→</span>';
+          btn.style.opacity = '1';
+        }, 500);
+      }
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>
