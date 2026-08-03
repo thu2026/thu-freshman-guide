@@ -45,10 +45,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: safe center;
     min-height: 100vh;
-    min-height: 100dvh;
-    padding: 20px 16px;
+    min-height: -webkit-fill-available;
+    padding: 20px 16px 40px;
   }
 
   /* ── 背景装饰 ── */
@@ -68,7 +68,9 @@
     background: var(--card);
     border-radius: 20px;
     box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
-    overflow: hidden;
+    /* ⚠️ 不用 overflow:hidden —— iOS微信WKWebView会把内部元素裁剪掉 */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     animation: cardIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
   @keyframes cardIn {
@@ -83,7 +85,8 @@
     padding: 32px 24px 28px;
     text-align: center;
     position: relative;
-    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    /* ⚠️ iOS微信兼容：overflow:hidden 改为直接裁剪伪元素 */
   }
   .card-header::after {
     content: '';
@@ -111,12 +114,11 @@
   }
   .logo-icon {
     width: 48px; height: 48px;
-    background: rgba(255,255,255,0.18);
-    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.22);
+    border: 1px solid rgba(255,255,255,0.3);
     border-radius: 14px;
     display: flex; align-items: center; justify-content: center;
     font-size: 26px;
-    backdrop-filter: blur(10px);
   }
   .school-name {
     font-size: 13px;
@@ -145,9 +147,8 @@
   }
   .badge {
     display: inline-flex; align-items: center; gap: 4px;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.25);
     border-radius: 20px;
     padding: 5px 12px;
     font-size: 12px;
@@ -206,22 +207,14 @@
     box-shadow: 0 6px 24px rgba(0,85,212,0.35);
     transition: all 0.25s;
     position: relative;
-    overflow: hidden;
     -webkit-tap-highlight-color: transparent;
-  }
-  .btn-primary::after {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
-    transform: translateX(-100%);
-    transition: transform 0.5s;
+    -webkit-appearance: none;
+    appearance: none;
   }
   .btn-primary:active {
     transform: scale(0.97);
     box-shadow: 0 3px 12px rgba(0,85,212,0.25);
-  }
-  .btn-primary:active::after {
-    transform: translateX(100%);
+    opacity: 0.85;
   }
   .btn-arrow {
     font-size: 18px;
